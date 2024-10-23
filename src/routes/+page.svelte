@@ -1,3 +1,72 @@
+<script lang="ts">
+	import Kartica from '$lib/kartica.svelte';
+	import type { Opis } from '$lib/types';
+
+	const opisi: Opis[] = [
+		{
+			name: 'Jabolko',
+			image:
+				'https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Golden_delicious_apple.jpg/640px-Golden_delicious_apple.jpg',
+			description:
+				'Jabolko [jábou̯ko] je sadež, ki raste na drevesu jablani. Spada med kulturne rastline, ki jih je vzgojil človek s pomočjo križanja. Korenine jabolka izvirajo iz Azije. V Evropo je verjetno prispelo s trgovci. Obstaja več kot 7500 kultivarjev jabolk. Jabolko zraste iz pet-listnega cveta.'
+		},
+		{
+			name: 'Hruška',
+			image: 'https://upload.wikimedia.org/wikipedia/commons/c/cf/Pears.jpg',
+			description:
+				'Hruška (znanstveno ime Pyrus communis) je do 16 m visoko drevo s pokončnimi vejami. Deblo doseže do 60 cm premera, lubje ima sivkasto-rjave barve, skorja je razpokana, številne vejice - mladike imajo na koncu trnate zaključke. Listi so zgoraj gladki, temnozeleni, spodaj pa bledi, fino dlakavi. Hruška spada v skupino pečkatih sadežev.'
+		},
+		{
+			name: 'Kivi',
+			image:
+				'https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Kiwifruit_cross_section.jpg/600px-Kiwifruit_cross_section.jpg',
+			description:
+				'Kivi (znanstveno ime Actinidia deliciosa) je do 10 m visoko drevo s pokončnimi vejami. Deblo doseže do 40 cm premera, lubje ima sivkasto-rjave barve, skorja je gladka, listi so zgoraj gladki, temnozeleni, spodaj pa bledi, fino dlakavi.'
+		},
+		{
+			name: 'Banana',
+			image:
+				'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Bananas.jpg/640px-Bananas.jpg',
+			description:
+				'Banana (znanstveno ime Musa acuminata) je do 10 m visoko drevo s pokončnimi vejami. Deblo doseže do 40 cm premera, lubje ima sivkasto-rjave barve, skorja je gladka, listi so zgoraj gladki, temnozeleni, spodaj pa bledi, fino dlakavi.'
+		},
+		{
+			name: '3',
+			image: 'https://i.pinimg.com/564x/a7/ff/a5/a7ffa5b022d9adde308bf924585075fa.jpg',
+			description:
+				'Število 3 je zelo zanimivo število, ki se pogosto pojavlja v matematiki, fiziki in filozofiji. V mnogih kulturah je tudi simbolno pomembno, saj predstavlja tridelnost, kot so tri dimenzije prostora, tri časa (preteklost, sedanjost, prihodnost) in tri aspekte človeka (telesnost, duhovnost, duševnost).'
+		},
+		{
+			name: 'Mandarina',
+			image:
+				'https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Citrus_reticulata_April_2013_Nordbaden.JPG/540px-Citrus_reticulata_April_2013_Nordbaden.JPG',
+			description:
+				'Mandarina (znanstveno ime Citrus reticulata) je do 10 m visoko drevo s pokončnimi vejami. Deblo doseže do 40 cm premera, lubje ima sivkasto-rjave barve, skorja je gladka, listi so zgoraj gladki, temnozeleni, spodaj pa bledi, fino dlakavi.'
+		},
+		{
+			name: 'Limona',
+			image:
+				'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/P1030323.JPG/640px-P1030323.JPG',
+			description:
+				'Limona (znanstveno ime Citrus limon) je do 10 m visoko drevo s pokončnimi vejami. Deblo doseže do 40 cm premera, lubje ima sivkasto-rjave barve, skorja je gladka, listi so zgoraj gladki, temnozeleni, spodaj pa bledi, fino dlakavi.'
+		},
+		{
+			name: 'Gorčica',
+			image:
+				'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Senf-Variationen_edit.jpg/639px-Senf-Variationen_edit.jpg',
+			description:
+				'Gorčica (znanstveno ime Capsicum annuum) je do 1 m visoka rastlina s pokončnimi vejami. Deblo doseže do 10 cm premera, lubje ima sivkasto-rjave barve, skorja je gladka, listi so zgoraj gladki, temnozeleni, spodaj pa bledi, fino dlakavi.'
+		},
+		{
+			name: 'Krompir',
+			image:
+				'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Potato_and_cross_section.jpg/640px-Potato_and_cross_section.jpg',
+			description:
+				'Krompir (znanstveno ime Solanum tuberosum) je do 1 m visoka rastlina s pokončnimi vejami. Deblo doseže do 10 cm premera, lubje ima sivkasto-rjave barve, skorja je gladka, listi so zgoraj gladki, temnozeleni, spodaj pa bledi, fino dlakavi.'
+		}
+	];
+</script>
+
 <h1 class="text-3xl text-center">PREDSTAVITEV RASTLINE</h1>
 
 <p>
@@ -8,52 +77,9 @@
 	za rast in delovanje organizma iz sončne svetlobe s pomočjo procesa fotosinteze, ki poteka v
 	kloroplastih, poleg tega imajo njihove celice celične stene, grajene iz celuloze.
 </p>
+
 <div class="grid grid-cols-3 gap-4 m-4 text-center">
-	<div class="bg-cyan-100 border-cyan-950 border-4 rounded-2xl">
-		<h1 class="font-bold">BANANOVEC</h1>
-		<img
-			class="rounded-lg"
-			src="//upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Luxor%2C_Banana_Island%2C_Banana_Tree%2C_Egypt%2C_Oct_2004.jpg/250px-Luxor%2C_Banana_Island%2C_Banana_Tree%2C_Egypt%2C_Oct_2004.jpg"
-		/>
-		<p>
-			Bananovec (znanstveno ime Musa) je rod večletnih rastlin tropskega izvora. Steblo ali bolj
-			pravilno imenovno »pseudosteblo« kjer listi tvorijo rozeto ki se samodejno podpira. V
-			vegetacijskem obdobju raste bananovec skupaj z obilico stranskih (hčerinskih) poganjkov.
-			Stranski poganjki se odstranjujejo zaradi koncentriranja hranil v starševski rastlini. Pri
-			vzgajanju se načrtno odbira ustrezni stranski poganjek za naslednjo rastno sezono po obliki
-			listov in vigorju. Po videzu bananovci spominjajo na palmo. Obstaja več sto različnih vrst
-			bananovcev. Njihov plod je banana.
-		</p>
-	</div>
-	<div class="bg-cyan-100 border-cyan-950 border-4 rounded-2xl">
-		<h1 class="font-bold">BAMBUS</h1>
-		<img
-			class="rounded-lg"
-			src="//upload.wikimedia.org/wikipedia/commons/thumb/2/2b/BambooKyoto.jpg/240px-BambooKyoto.jpg"
-		/>
-		<p>
-			Támbus (znanstveno ime Bambuseae) je trajnica iz družine trav z olesenelimi stebli. Obstaja
-			ogromno različnih vrst bambusa, ki jih najdemo praktično na vseh celinah. Bambus spada v
-			veliko družino Gramineae, ki vključuje tudi trave, žita, oves in koruzo. Bambus je trava in z
-			nekaj izjemami je tropska vrsta.
-		</p>
-	</div>
-	<div class="bg-cyan-100 border-cyan-950 border-4 rounded-2xl px-4">
-		<h1 class="font-bold">SONČNICA</h1>
-		<img
-			class="rounded-lg"
-			src="//upload.wikimedia.org/wikipedia/commons/thumb/4/40/Sunflower_sky_backdrop.jpg/220px-Sunflower_sky_backdrop.jpg"
-		/>
-		<p>
-			Sončnica (znanstveno ime Helianthus (lat., izg. heliántus)) [3] je rod, ki obsega približno 70
-			vrst enoletnih in trajnic cvetočih rastlin iz družine nebinovk (Asteraceae).[4][5] Razen treh
-			južnoameriških vrst so ostale iz rodu Helianthus izvorno doma v Severni in Srednji Ameriki.
-			Ljudski imeni "sončnica" in "navadna sončnica" se običajno nanašata na priljubljeno enoletno
-			vrsto Helianthus annuus, katere okrogle cvetne glavice v kombinaciji z liguli izgledajo kot
-			sonce. [6] To in druge vrste, predvsem topinambur (H. tuberosus), gojijo v zmernih regijah in
-			nekaterih tropskih regijah kot prehranske rastline za ljudi, govedo in perutnino ter kot
-			okrasne rastline.[7] Navadna sončnica običajno raste poleti in v zgodnji jeseni, osrednja
-			sezona rasti pa je sredi poletja.[8]
-		</p>
-	</div>
+	{#each opisi as opis}
+		<Kartica {opis} />
+	{/each}
 </div>
